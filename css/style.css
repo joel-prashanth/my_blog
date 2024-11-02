@@ -33,8 +33,6 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
 /* Logo */
 .logo {
   font-size: 1.5rem;
@@ -133,44 +131,16 @@ body {
   color: #333;
   text-align: left;
   padding: 0 20px;
-  opacity: 0; /* Start with the hero section hidden */
-  animation: fadeIn 1s ease forwards; /* Trigger fadeIn animation */
-  animation-delay: 0.3s; /* Optional delay for smoother appearance */
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .hero-image {
-  width: 40%; /* Adjust the width of the image as needed */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 500px; /* Optional: Add some rounded corners */
-  margin-right: 20px; /* Space between image and text */
-}
-
-.hero h1{
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-
-.hero p{
-  font-size: 1.125rem;
-  margin: 20px 0;
-  color: #555;
-}
-
-.hero-content {
-  max-width: 50%; /* Limit width of text content */
-  padding: 20px;
-}
-
-/* Keyframes for fadeIn effect */
-@keyframes fadeIn {
-  from {
-    opacity: 0; /* Start fully transparent */
-    transform: translateY(20px); /* Start slightly below */
-  }
-  to {
-    opacity: 1; /* End fully visible */
-    transform: translateY(0); /* End at original position */
-  }
+  width: 40%;
+  height: auto;
+  border-radius: 500px;
+  margin-right: 20px;
 }
 
 .hero h1 {
@@ -184,11 +154,30 @@ body {
   color: #555;
 }
 
-/* Hero Button */
-.hero-button {
-  display: inline-flex; /* Aligns icon and text properly */
-  align-items: center; /* Centers the icon vertically */
+.hero-content {
+  max-width: 50%;
+  padding: 20px;
+}
+
+/* Keyframes for fadeIn effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Uniform Button Styles */
+.hero-button, .social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 20px;
+  width: 200px; /* Set a consistent width */
   background: #0073e6;
   color: #fff;
   text-decoration: none;
@@ -197,11 +186,56 @@ body {
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.hero-button i {
-  margin-right: 8px; /* Space between icon and text */
+.hero-button i, .social-button i {
+  margin-right: 8px;
 }
 
-.hero-button:hover {
+.hero-button:hover, .social-button:hover {
   background: #005bb5;
   transform: scale(1.05);
+}
+
+/* Social Button Colors */
+.social-button {
+  background: #333;
+}
+
+.social-button:hover {
+  background: #555;
+}
+
+/* Align buttons in a row */
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* LinkedIn Button Color */
+.social-button[href*="linkedin.com"] {
+  background-color: #2B69C1; /* Set LinkedIn button color */
+}
+
+.social-button[href*="linkedin.com"]:hover {
+  background-color: #1B4E90; /* Darker shade on hover */
+}
+
+.social-button[href*="github.com"]{
+  background-color: #010409;
+}
+
+.social-button[href*="github.com"]:hover{
+  background-color: #000307;
+}
+
+/* Responsive Styles for Buttons */
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-button, .social-button {
+    width: 80%;
+    text-align: center;
+  }
 }

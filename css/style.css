@@ -118,3 +118,15 @@ body {
     max-height: 300px; /* Adjust as you fit your links */
   }
 }
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background: url('../images/hero-background.jpg') center/cover no-repeat;
+  color: #222;
+  text-align: center;
+}

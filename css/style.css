@@ -126,9 +126,11 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh; /* Full viewport height */
-  background: url('../images/hero-background.jpg') center/cover no-repeat;
-  color: #222;
+  /* background: url('../images/hero-background.jpg') center/cover no-repeat; */
+  background: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
+  color: #fff;
   text-align: center;
+  padding: 0 20px;
 }
 
 .hero-content {
